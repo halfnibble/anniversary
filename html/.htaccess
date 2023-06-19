@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+DirectoryIndex index.php
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+AddHandler application/x-httpd-alt-php73___lsphp .php
+## BEGIN Compability settings for mt
+<IfModule mod_env.c>
+  SetEnv DATABASE_SERVER localhost
+  RewriteEngine on
+  RewriteRule ^ - [E=SITE_ROOT:%{DOCUMENT_ROOT}]
+  RewriteRule ^ - [E=SITE_CGIROOT:%{DOCUMENT_ROOT}/cgi-bin]
+  RewriteRule ^ - [E=SITE_HTMLROOT:%{DOCUMENT_ROOT}]
+</IfModule>
+## END Compability settings for mt

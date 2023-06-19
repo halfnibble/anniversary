@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Joshua and Bee Wedekind's 5 year Anniversary</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			var winWidth = document.documentElement.clientWidth;
+			var messageWidth = (winWidth - 640 ) / 2;
+			
+			
+			$( function() {
+				$("#message").css({
+					"position": "absolute",
+					"margin-left": messageWidth
+				});
+				$("#message").fadeIn("slow");
+			});
+		</script>
+		<style type="text/css">
+			
+			#title {
+				width; 600px;
+				margin-left: auto;
+				margin-right: auto;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+			}
+			#main {
+				background-color: #101010;
+				width: 600px;
+				height: 410px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+				padding: 10px;
+				
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+			
+			}
+			
+			.diamond {
+				width: 400px;
+				margin-left: 100px;
+				margin-top: 90px;
+			}
+			
+			#message {
+				display: none;
+				position: fixed;
+				_position: absolute;
+				z-index: 2;
+				height: 410px;
+				width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 70px;
+				
+				background-color: #FFFFFF;
+				border: 2px solid #101010;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+				padding: 10px;
+				
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+
+				
+			}
+			
+		</style>
+    </head>
+    <body>
+    	<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script>
+				FB.init({
+    				appId  : 'YOUR APP ID',
+    				status : true, // check login status
+    				cookie : true, // enable cookies to allow the server to access the session
+    				xfbml  : true  // parse XFBML
+  				});
+			</script>
+    	<div id="message"> hello, bee.  </div>
+        <h1 id="title">June 3rd, 2011 marks the 5th year that Joshua and Bee Wedekind have been happily married!</h1>
+		
+		<div id="main">
+			Happy Anniversary, Bee!
+			<img class="diamond" src="/images/testdiamond.png" />
+			<p> 
+				Love,
+				<BR />
+				~ Joshua
+			</p>
+		</div>
+		
+		<div id="fb-root"></div>
+		<script src="http://connect.facebook.net/en_US/all.js#appId=165669750163131&amp;xfbml=1"></script>
+		<fb:like href="http://anniversary.ajaxkc.com/josh-and-bee-5th/" send="true" width="600" show_faces="true" font="arial"></fb:like>
+		
+	</body>
+</html>

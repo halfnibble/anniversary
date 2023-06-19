@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Joshua and Bee Wedekind's 5 year Anniversary</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script>
+				FB.init({
+    				status : true, // check login status
+    				cookie : true, // enable cookies to allow the server to access the session
+    				xfbml  : true  // parse XFBML
+  				});
+			</script>
+		<script src="http://connect.facebook.net/en_US/all.js#appId=165669750163131&amp;xfbml=1"></script>
+		<script type="text/javascript">
+			var winWidth = document.documentElement.clientWidth;
+			var messageWidth = (winWidth - 800 ) / 2;
+			
+			//popup scripting: 
+			var message_status = 0;			
+			function toggle_status() {
+				if(message_status == 0){
+					$("#message-box").css({
+						"position": "absolute",
+						"margin-left": messageWidth
+					});
+					$("#message-box").fadeIn("slow");
+					message_status = 1;
+				} else {
+					$("#message-box").fadeOut("slow");
+					message_status = 0;
+				}
+			}
+			$( function() {
+				toggle_status();
+			});
+			
+			//message scripting:
+			var msg = 0;
+			var message = new Array();
+			message[0] = "<p>Dear Bee,<br />I want you to know that I've enjoyed every single moment with you...</p>";
+			message[1] = "<p>And that I've spent a lot of time considering what to get you for our anniversary...</p>";
+			message[2] = "<p>But the traditional \"wood\" or modern \"silver\" just didn't seem good enough...</p>";
+			message[3] = "<p>I think you deserve brilliant diamonds for making me so happy these past years...</p>";
+			message[4] = "<p>But you know as well as I do that we really can't afford to buy diamonds right now...</p>";
+			message[5] = "<p>So...I created a 3 dimensional model of a diamond for you...</p>";
+			message[6] = "<p>I hope you like it.</p><p> Love, Joshua </p>";
+			
+			//attach events:
+			$( function() {
+				$("#next").click( function() {
+					if(msg < 6) {
+						msg += 1;
+						$("#message").replaceWith("<div id='message'>" + message[msg] + "</div>");
+					} else {
+						toggle_status();
+					}
+				});
+				$("#previous").click( function() {
+					if(msg > 0) {
+						msg -= 1;
+						$("#message").replaceWith("<div id='message'>" + message[msg] + "</div>");
+					} else {
+						toggle_status();
+					}
+				});
+				$("m")
+			});
+		</script>
+		<style type="text/css">
+			
+			#title {
+				width; 600px;
+				margin-left: auto;
+				margin-right: auto;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+			}
+			#main {
+				background-color: #101010;
+				width: 600px;
+				height: 410px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 30px;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+				padding: 10px;
+				
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+			
+			}
+			
+			.diamond {
+				width: 400px;
+				margin-left: 100px;
+				margin-top: 90px;
+			}
+			
+			#message-box {
+				display: none;
+				position: fixed;
+				_position: absolute;
+				z-index: 2;
+				height: 430px;
+				width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				
+				background-color: #FFFFFF;
+				border: 2px solid #101010;
+				
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.4em;
+				color: #0077DD;
+				padding: 10px;
+				
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+
+				text-align: center;
+				vertical-align: middle;				
+			}
+			
+			#message {
+				font-family: cursive;
+				font-size: 2.2em;
+				margin-top: 20px;
+				
+				height: 360px;
+				
+			}
+			
+			#message-footer {
+				margin-bottom: 0;
+			}
+			
+		</style>
+    </head>
+    <body>
+    	<div id="fb-root"></div>
+			
+    	<div id="message-box"> 
+			<div id="message">
+				<p>
+				Dear Bee,
+				<br /> I want you to know that I've enjoyed every single moment with you...</p>
+			</div>  
+			<div id="message-footer">
+				<button id="previous"> <= PREVIOUS </button> ||
+				<button id="next"> NEXT =></button>
+			</div>
+			
+		</div>
+        
+		<h1 id="title">June 3rd, 2011 marks the 5th year that Joshua and Bee Wedekind have been happily married!</h1>
+		
+		<div id="main">
+			Happy Anniversary, Bee!
+			<div id="diamond">
+				<img class="diamond" src="/images/testdiamond.png" />
+			</div>
+			<p> 
+				Love,
+				<BR />
+				~ Joshua
+			</p>
+		</div>
+		
+		
+		<div style="width: 600px; margin-left: auto; margin-right: auto; padding-top: 30px;">
+			<fb:like href="http://anniversary.ajaxkc.com/josh-and-bee-5th/" send="true" width="600" show_faces="true" font="arial"></fb:like>
+		</div>
+	</body>
+</html>
